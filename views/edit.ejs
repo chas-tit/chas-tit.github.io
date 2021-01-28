@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ <style>
+     body{
+        background-color: wheat;    
+    }
+    .btn{
+    background-color:#F4AF69 ;
+    width: 200px;
+    border:none;
+    text-decoration: none;
+    font-weight: bold;
+    color:#CE7055;
+    font-size: 20px;
+    margin: 10px;
+    display: block;
+    
+    }
+    nav{
+    background-color: wheat;
+    }
+    .top{
+    margin-top: 10px;
+    margin-left: 30%;
+    background-color: #f7be86f8;
+    width: 170px;
+    font-weight: bold;
+    color:#CE7055;
+    font-size: 20px;
+    border-color: #f7be86f8;
+    text-align: center;
+    }
+    .submit{
+    margin-top: 15px;
+    background-color: wheat;
+    width: 100px;
+    font-weight: bold;
+    color:#CE7055;
+    font-size: 18px;
+    border-collapse: collapse;
+    }
+    form{
+    width: fit-content;
+    padding: 15px;
+    margin: auto;
+    background-color:#d37870c7;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+    }
+    label{
+    margin-right: 10px;
+    font-size: 15px;
+    color: white ;
+    font-weight: bold;
+    width: 100px;
+    text-align: left;
+    }
+    .form-control{
+    width: 50vh;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    border-color: #d37870c7;
+    background-color: wheat;
+    }
+ </style>
+</head>
+<body>
+
+     <ul class="nav ">
+    <li class="nav-item">
+        <label class="top">EDIT</label>
+    </li>
+    </ul>
+
+
+            <form  class="mt-2 pt-5" action="/edit/<%- users._id %>" method="POST" >
+                <div class="form-row">
+                    <div class="col">
+                    <label for="idnum">ID NO.</label>
+                    </div>
+                    <div class="col">
+                    <input type="number" class="form-control" id="idnum" name="idnum" value="<%- users.idnum %>">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="firstname">FIRSTNAME</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="firstname" name="firstname" value="<%- users.firstname %>">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="lastname">LASTNAME</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="lastname" name="lastname" value="<%- users.lastname %>">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="contact">CONTACT NO.</label>
+                    </div>
+                    <div class="col">
+                    <input type="number"  class="form-control" id="contact" name="contactnum" value="<%- users.contactnum %>">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="address">ADDRESS</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="address" name="address" value="<%- users.address %>">
+                    </div>
+                </div>
+
+                
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="submit btn " >SUBMIT</button>
+                
+                </div>
+            </form>
+
+</body>
+</html>

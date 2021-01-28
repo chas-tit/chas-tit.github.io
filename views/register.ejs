@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active"  href="/" >Home Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login" >Login</a></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  href="/register" >Register</a>
+        </li>
+
+    </ul>
+
+    <ul class="nav ">
+    <li class="nav-item">
+        <label class="top">LOGIN</label>
+    </li>
+    </ul>
+
+
+            <form  class="mt-2 pt-5" action="/auth/register" method="POST" >
+                <div class="form-row">
+                    <div class="col">
+                    <label for="idnum">ID NO.</label>
+                    </div>
+                    <div class="col">
+                    <input type="number" class="form-control" id="idnum" name="idnum">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="firstname">FIRSTNAME</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="firstname" name="firstname">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="lastname">LASTNAME</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="lastname" name="lastname">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="contact">CONTACT NO.</label>
+                    </div>
+                    <div class="col">
+                    <input type="number"  class="form-control" id="contactnum" name="contactnum">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label for="address">ADDRESS</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control"  id="address" name="address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label class="mt-5" for="username">USERNAME</label>
+                    </div>
+                    <div class="col">
+                    <input type="text" class="form-control mt-5" id="username" name="username">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                    <label  for="password">PASSWORD</label>
+                    </div>
+                    <div class="col">
+                    <input type="password" class="form-control"  id="password" name="password">
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="submit btn " >SUBMIT</button>
+                
+                </div>
+            </form>
+
+</body>
+</html>

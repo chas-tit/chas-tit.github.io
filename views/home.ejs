@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <% if(message.error) {%>
+  
+        <div class="alert alert-danger alert-dismissible fade show" style="text-align: center;" >
+             <%= message.error %>
+         <a href="#" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></a>
+       </div>
+        <% } %>
+ <% if(message.success) {%>
+     <div class="alert alert-success alert-dismissible fade show" style="text-align: center;" >
+         <%= message.success %>
+     <a href="#" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></a>
+   </div>
+        <% } %>
+
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item"><a class="nav-link active" href="/">Home Page</a></li>
+        </ul>
+        <ul class="nav ">
+          <li class="nav-item">
+              <label class="top">USERS INFO</label>
+          </li>
+          </ul>
+          
+        <table class="table table-hover "  >
+            <thead>
+              <tr>
+                <th scope="col">ID No.</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Contact No.</th>
+                <th scope="col">Address</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+
+              </tr>
+            </thead>
+            <tbody>
+             
+                  
+                <% users.forEach((user) =>{ %>
+                    <tr>
+                  <td><%- user.idnum  %></td> 
+                  <td><%- user.firstname  %></td> 
+                  <td><%- user.lastname  %></td> 
+                  <td><%- user.contactnum  %></td>
+                  <td><%- user.address  %></td>
+                  
+                  <td ><a href="/edit/<%- user._id %>"><i class="far fa-edit"></i></a></td> 
+                  <td><a href="/delete/<%- user._id %>"><i class="far fa-trash-alt"></i></a></td>   
+                </tr>
+                  <% }); %>
+              
+              
+            </tbody>
+          </table>
+    
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
+</html>
+
